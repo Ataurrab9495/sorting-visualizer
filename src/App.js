@@ -1,24 +1,15 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Container } from 'react-bootstrap';
 import './App.css';
+import Visualizer from './component/visualizer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className='d-flex justify-content-center' style={{height:'100vh'}}>
+      <div className='w-100'>
+      <Visualizer/>
+      </div>
+    </Container>
   );
 }
 

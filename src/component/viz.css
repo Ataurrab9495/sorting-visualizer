@@ -1,0 +1,15 @@
+
+.custom-container{
+    position: absolute;
+    left: 200px;
+}
+.array-bar{
+    width:2px;
+    background-color: turquoise;
+    display: inline-block;
+    margin:0 1px;
+}
+
+.custom-css{
+    border:1px solid black;
+}
