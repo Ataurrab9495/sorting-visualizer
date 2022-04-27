@@ -1,44 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Container, Button } from 'react-bootstrap'
 
 import "./viz.css"
 
-const Visualizer = ({ range, input }) => {
-    const [array, setArray] = useState([]);
-  
+const Visualizer = ({ range,array,generate,bubble,insertion }) => {
+ 
 
+    
 
-    const resetArray = () => {
-        let arr = [];
-        for (let i = 0; i <230; i++) {
-            arr.push(randomArray(1, 500))
-        }
-        setArray(arr)
-    }
-
-
-
-    const randomArray = (min, max) => {
-        return Math.floor(Math.random() * (max - min + 1) + min)
-    }
-
-
-    const bubbleSort = () => {
-
-    }
-
-    const insertionSort = () => {
-
-    }
 
     const mergeSort = () => {
 
     }
-
-
-    useEffect(() => {
-        resetArray();
-    }, [])
 
     return (
         <Container>
@@ -52,9 +25,9 @@ const Visualizer = ({ range, input }) => {
             </div>
             <Container>
                 <div className="d-flex mt-3 justify-content-center">
-                    <Button variant="warning" className="me-5" onClick={() => { resetArray() }}>  New Array</Button>
-                    <Button variant="warning" className="me-5" onClick={() => { bubbleSort() }}>Bubble Sort</Button>
-                    <Button variant="warning" className="me-5" onClick={() => { insertionSort() }}>Insertion Sort</Button>
+                    <Button variant="warning" className="me-5" onClick={generate}>New Array</Button>
+                    <Button variant="warning" className="me-5" onClick={bubble}>Bubble Sort</Button>
+                    <Button variant="warning" className="me-5" onClick={insertion}>Insertion Sort</Button>
                     <Button variant="warning" className="me-5" onClick={() => { mergeSort() }}>Merge Sort</Button>
                     <Button variant="warning" className="me-5" onClick={range}>Define Range</Button>
                 </div>

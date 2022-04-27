@@ -1,15 +1,16 @@
-const insertionSort = () =>{
-    const dupArray = array.slice();
-
-    for(let i =0;i<dupArray.length;i++){
-        let key = dupArray[i];
+const insertionSort = (inputArray) =>{
+   
+    for(let i =0;i<inputArray.length;i++){
+        let key = inputArray[i];
         let j = i-1;
-        while(dupArray[j] > key && j >= 0){
-            arr[j+1] = arr[j];
+        while(inputArray[j] > key && j >= 0){
+            inputArray[j+1] = inputArray[j];
             j = j-1;
         }
-        arr[j+1] = key;
+        inputArray[j+1] = key;
     }
+
+    return inputArray
 }
 
 export default insertionSort

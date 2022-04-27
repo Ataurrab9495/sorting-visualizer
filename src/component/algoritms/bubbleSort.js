@@ -1,19 +1,18 @@
-const swap = (arr , i , j) => {
-    let temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
 
-const bubbleSort = () =>{
-    const dupArray = array.slice();
-    
-    for(let i=0;i<dupArray.length;i++){
-        for(let j=0;dupArray.length-i-1;j++){
-            if(dupArray[j] > dupArray[j+1]){
-                swap(dupArray , j , j+1);
+const bubbleSort = (inputArr) =>{
+    console.log("i'm in....")
+    let len = inputArr.length;
+    for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len; j++) {
+            if (inputArr[j] > inputArr[j + 1]) {
+                let tmp = inputArr[j];
+                inputArr[j] = inputArr[j + 1];
+                inputArr[j + 1] = tmp;
             }
         }
     }
+    console.log("done");
+    return inputArr;
 }
 
 export default bubbleSort
