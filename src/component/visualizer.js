@@ -3,16 +3,8 @@ import { Container, Button } from 'react-bootstrap'
 
 import "./viz.css"
 
-const Visualizer = ({ range,array,generate,bubble,insertion }) => {
+const Visualizer = ({ range,array,generate,bubble,insertion,merge }) => {
  
-
-    
-
-
-    const mergeSort = () => {
-
-    }
-
     return (
         <Container>
             <div className='d-flex justify-content-center'>
@@ -28,7 +20,7 @@ const Visualizer = ({ range,array,generate,bubble,insertion }) => {
                     <Button variant="warning" className="me-5" onClick={generate}>New Array</Button>
                     <Button variant="warning" className="me-5" onClick={bubble}>Bubble Sort</Button>
                     <Button variant="warning" className="me-5" onClick={insertion}>Insertion Sort</Button>
-                    <Button variant="warning" className="me-5" onClick={() => { mergeSort() }}>Merge Sort</Button>
+                    <Button variant="warning" className="me-5" onClick={merge}>Merge Sort</Button>
                     <Button variant="warning" className="me-5" onClick={range}>Define Range</Button>
                 </div>
             </Container>

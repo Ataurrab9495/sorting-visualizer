@@ -4,6 +4,7 @@ import './App.css';
 import Visualizer from './component/visualizer';
 import bubbleSort from './component/algoritms/bubbleSort';
 import insertionSort from './component/algoritms/insertionSort'
+import mergeSort from './component/algoritms/mergeSort'
 
 function App() {
   const [arr, setArr] = useState([]);
@@ -51,6 +52,14 @@ function App() {
 
   }
 
+
+
+  const mergeOnClick = () =>{
+    const sort = mergeSort(arr);
+    const new_arr = [...sort]
+    setArr(new_arr)
+  }
+
   return (
     <Container className='d-flex align-items-center justify-content-end' style={{ height: '100vh' }} fluid>
       <div className='w-100' style={{ maxWidth: '100%' }}>
@@ -60,6 +69,7 @@ function App() {
           generate={updateArray}
           bubble={bubbleSortOnClick}
           insertion={insertionOnClick}
+          merge ={mergeOnClick}
         />
       </div>
     </Container>
